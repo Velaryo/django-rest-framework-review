@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'movie',
     'user',
+    'rent',
     'drf_yasg',
     'rest_framework_simplejwt'
 
