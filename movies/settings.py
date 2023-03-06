@@ -12,9 +12,21 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+#*DJANGO ENVIRON
+import environ
+import os
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+#*FIN DJANGO ENVIRON
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+#*DJANGO ENVIRON
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+#*FIN DJANGO ENVIRON
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -82,8 +94,12 @@ WSGI_APPLICATION = 'movies.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DB_NAME'),
+        'PORT': env('DB_PORT'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST')
     }
 }
 
