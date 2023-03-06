@@ -25,9 +25,9 @@ Se está usando mysql por defecto.
 
 ## 5. Configurar variables de entorno
 ```
-DB_NAME=''
-DB_USER=''
-DB_PASSWORD=''
-DB_HOST=''
-DB_PORT=''
+MYSQLDATABASE=''
+MYSQLUSER=''
+MYSQLPASSWORD=''
+MYSQLHOST=''
+MYSQLPORT=''
 ```
