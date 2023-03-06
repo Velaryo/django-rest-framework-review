@@ -37,7 +37,16 @@ SECRET_KEY = 'django-insecure-h=0s+x7w0ndh1nvkt33)o+spc+g$r94_yprzr^7qpusva)7#n1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost", 
+    "django-rest-framework-review-production-4dca.up.railway.app"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "localhost", 
+    "http://django-rest-framework-review-production-4dca.up.railway.app"
+]
+
 
 
 # Application definition
