@@ -43,7 +43,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://django-rest-framework-review-production-4dca.up.railway.app"
+    "https://django-rest-framework-review-production-4dca.up.railway.app"
 ]
 
 
